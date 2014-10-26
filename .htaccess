@@ -1,0 +1,11 @@
+<Files ~ "^([\._]ht|README$|VERSION$|COPYING$)">
+    Order allow,deny
+    Deny from all
+</Files>
+
+RewriteEngine on
+RewriteRule ^(.*).ckt              $1.py  [QSA,L]
+
+ServerSignature Off
+#ServerAdmin xianhao.qing@ck-telecom.com
+ServerSignature Email
